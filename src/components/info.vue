@@ -15,7 +15,7 @@
     <!-- v-show é um boolean, só utiliza para fazer algo qnd for true-->
     <p v-show="showTextEmail">Mande uma mensagem para {{ email }}</p>
     <!-- v-bind interpreta o link como um dado dinâmico-->
-    <p>Para acessar meu portfólio <a v-bind:href="myLink" target="blank">basta clicar aqui</a></p>
+    <p class="portfolio">Para acessar meu portfólio <a v-bind:href="myLink" target="blank">basta clicar aqui</a></p>
     <Picture/>
     <div>
     <p>Testando se importou componente</p>
