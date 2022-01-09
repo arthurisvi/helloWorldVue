@@ -2,11 +2,15 @@
 <div>
     <p v-if="isWorking">Estou trabalhando no momento</p>
     <p v-else>No momento estou a procura de trabalho.</p>
-    <p>Utilizo as seguintes tecnologias: </p>
+    <p>Utilizo as seguintes tecnologias para back-end: </p>
     <ul>
-        <li>JavaScript</li>
-        <li>Java</li>
-        <li>Python</li>
+        <li v-for="(technology, i) in backendTechnologies" v-bind:key="i">{{ technology }}</li>
+    </ul>
+    <p>Utilizo as seguintes tecnologias para front-end: </p>
+    <ul>
+        <li v-for="technology in frontendTechnologies" :key="technology.id">
+            {{technology.language}}
+        </li>
     </ul>
     <div>
         <button @click="showEmail">{{ textButton }}</button>
@@ -36,7 +40,13 @@ export default{
             showTextEmail: false,
             email: 'spfcarthur1@gmail.com',
             myLink: 'https://google.com',
-            textButton: 'Mostrar e-mail'
+            textButton: 'Mostrar e-mail',
+            backendTechnologies: ["JavaScript", "Java", "PHP"],
+            frontendTechnologies: [
+                {id: 1, language: 'HTML'},
+                {id: 2, language: 'CSS'},
+                {id: 3, language: 'Vue.js'}
+            ]
         }
     },methods:{
         showEmail(){
