@@ -1,6 +1,6 @@
 <template>
   <div>
-  <Header/>
+  <Header :isLogged="true"/>
   <firstComponent/>
   <lifeCycle/>
   <pessoa/>

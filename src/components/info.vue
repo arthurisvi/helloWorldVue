@@ -34,11 +34,13 @@ export default{
     components:{
         Picture
     },
+    props:{
+        email: String,
+        isWorking: Boolean
+    },
     data(){
         return {
-            isWorking: false,
             showTextEmail: false,
-            email: 'spfcarthur1@gmail.com',
             myLink: 'https://google.com',
             textButton: 'Mostrar e-mail',
             backendTechnologies: ["JavaScript", "Java", "PHP"],
